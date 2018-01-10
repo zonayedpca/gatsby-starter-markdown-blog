@@ -1,7 +1,7 @@
-import React from "react"
+import React from 'react';
 
 export default ({ data }) => {
-  console.log(data); 
+  console.log(data);
   return (
     <div>
       <h1>My Site's Files</h1>
@@ -15,26 +15,18 @@ export default ({ data }) => {
           </tr>
         </thead>
         <tbody>
-          {data.allFile.edges.map(({ node }, index) =>
+          {data.allFile.edges.map(({ node }, index) => (
             <tr key={index}>
-              <td>
-                {node.relativePath}
-              </td>
-              <td>
-                {node.prettySize}
-              </td>
-              <td>
-                {node.extension}
-              </td>
-              <td>
-                {node.birthTime}
-              </td>
+              <td>{node.relativePath}</td>
+              <td>{node.prettySize}</td>
+              <td>{node.extension}</td>
+              <td>{node.birthTime}</td>
             </tr>
-          )}
+          ))}
         </tbody>
       </table>
     </div>
-  )
+  );
 };
 
 export const query = graphql`
@@ -50,4 +42,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

@@ -2,7 +2,7 @@
   "name": "gatsby-starter-markdown-blog",
   "description": "Setup basic gatsby based blog that uses local markdown files.",
   "version": "1.0.0",
-  "author" : "Phani Kandula <phani.kandula@gmail.com>",
+  "author": "Phani Kandula <phani.kandula@gmail.com>",
   "dependencies": {
     "gatsby": "^1.9.145",
     "gatsby-link": "^1.6.32",
@@ -20,8 +20,12 @@
   ],
   "license": "MIT",
   "scripts": {
-  "develop": "gatsby develop",
-  "build": "gatsby build",
-  "serve": "gatsby serve"
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "format": "prettier --trailing-comma all  --single-quote --write \"src/**/*.js\""
+  },
+  "devDependencies": {
+    "prettier": "^1.10.1"
   }
 }
